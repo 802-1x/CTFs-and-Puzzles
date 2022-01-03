@@ -1,0 +1,30 @@
+Name: Web Gauntlet
+Points: 200
+Category: Web Exploitation
+Problem Statement: Can you beat the filters? Log in as admin http://jupiter.challenges.picoctf.org:9683/ http://jupiter.challenges.picoctf.org:9683/filter.php
+
+My Process / Solution
+
+ROUND 1
+1) Inspecting the page reveals two links. One contains a web form with two inputs (username and password). The file contains the filter for this round. In this case an or.
+2) Trying a random username/password combination reveals the underlying SQL query in the background. Using admin'-- solves the first round. 
+
+ROUND 2
+1) Inspecting the filter.php file again shows: Round2: or and like = --
+2) Trying another style of comment (#) doesn't work, but /* does. So using a username of admin'/* gets us through the second round.
+
+ROUND 3
+1) Inspecting the filter.php file shows: Round3: or and = like > < --
+2) This was a bit of a fail. I refreshed the website, which automatically tried using my last attempt (admin'/*) and it worked. Onto the next round I guess.
+
+ROUND 4
+1) Inspecting the filter.php file shows: Round4: or and = like > < -- admin
+2) We cannot use admin, despite that being the username. We just need to be creative and cocatenate through: a'||'dmin'/*
+
+ROUND 5
+1) Inspecting the filter.php file shows: Round5: or and = like > < -- union admin
+2) Another fail. Refreshing the webpage automatically resolved the round just like the third round.
+
+Inspecting the filter.php file now reveals the flag.
+
+Flag: picoCTF{y0u_m4d3_1t_d846125f7bdbf4d6e89cbc5edb6fa739}
