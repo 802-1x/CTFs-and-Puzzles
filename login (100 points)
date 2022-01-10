@@ -1,0 +1,10 @@
+Name: login
+Points: 100
+Category: Web Exploitation
+Problem Statement: My dog-sitter's brother made this website but I can't get in; can you help? login.mars.picoctf.net
+
+My Process / Solution
+
+1) A quick inspection for any cookies and for source client-side files found an interesting JavaScript line in index.js. Line 12 reveals the password that has been converted into Base64 from ASCII via btoa(). Using the browser's console, we therefore run atob("cGljb0NURns1M3J2M3JfNTNydjNyXzUzcnYzcl81M3J2M3JfNTNydjNyfQ") to retrieve the flag.
+
+Flag: picoCTF{53rv3r_53rv3r_53rv3r_53rv3r_53rv3r}
