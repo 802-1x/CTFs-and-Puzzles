@@ -1,0 +1,10 @@
+Name: 13
+Points: nil
+Category: Cryptography
+Problem Statement: Cryptography can be easy, do you know what ROT13 is? cvpbPGS{abg_gbb_onq_bs_n_ceboyrz}
+
+My Process / Solution
+
+1) Using an online decoder trivialises this one. Or just doing it by hand.
+
+Flag: picoCTF{not_too_bad_of_a_problem}
