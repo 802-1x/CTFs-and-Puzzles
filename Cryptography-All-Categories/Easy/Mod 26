@@ -1,0 +1,10 @@
+Name: Mod 26
+Points: nil
+Category: Web Exploitation
+Problem Statement: Cryptography can be easy, do you know what ROT13 is? cvpbPGS{arkg_gvzr_V'yy_gel_2_ebhaqf_bs_ebg13_Ncualgvd}
+
+My Process / Solution
+
+1) Using an online decoder trivialises this one. Or just doing it by hand.
+
+Flag: picoCTF{next_time_I'll_try_2_rounds_of_rot13_Aphnytiq}
