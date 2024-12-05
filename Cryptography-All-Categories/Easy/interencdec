@@ -1,0 +1,13 @@
+Name: interencdec
+Points: nil
+Category: Cryptography
+Problem Statement: Can you get the real meaning from this file. Download the file here: https://artifacts.picoctf.net/c_titan/1/enc_flag
+
+My Process / Solution
+
+1) Opening the downloaded file reveals what appears to be a base64 encoded string: YidkM0JxZGtwQlRYdHFhR3g2YUhsZmF6TnFlVGwzWVROclgyeG9OakJzTURCcGZRPT0nCg==
+   Decoding gives: b'd3BqdkpBTXtqaGx6aHlfazNqeTl3YTNrX2xoNjBsMDBpfQ=='
+   This also appears to be a base64 encoded string, but enclosed in b'', so let's repeat without the enclosure for: wpjvJAM{jhlzhy_k3jy9wa3k_lh60l00i}
+2) The input string appears to be in a similar format to a flag. Using a caesar cipher with shift 19 we get: picoCTF{caesar_d3cr9pt3d_ea60e00b}
+
+Flag: picoCTF{caesar_d3cr9pt3d_ea60e00b}
