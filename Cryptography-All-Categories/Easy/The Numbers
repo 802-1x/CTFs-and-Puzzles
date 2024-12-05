@@ -1,0 +1,10 @@
+Name: The Numbers
+Points: nil
+Category: Cryptography
+Problem Statement: The (https://jupiter.challenges.picoctf.org/static/f209a32253affb6f547a585649ba4fda/the_numbers.png)... what do they mean?
+
+My Process / Solution
+
+1) Taking an initial guess that the mapping is to the alphabet reveals the flag.
+
+Flag: PICOCTF{THENUMBERSMASON}
